@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 
+figlet -c Manjaro
 [[ $- != *i* ]] && return
 
 colors() {
@@ -137,3 +138,10 @@ ex ()
 }
 
 export PS1="\[\033[38;5;200m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;34m\]\h\[$(tput sgr0)\]:\[$(tput sgr0)\]\[\033[38;5;33m\]\w\[$(tput sgr0)\]>\[$(tput sgr0)\]"
+. "$HOME/.cargo/env"
+eval "$(thefuck --alias)"
+
+#Aliases
+alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
+alias home="cd ~"
+alias cls="clear"
